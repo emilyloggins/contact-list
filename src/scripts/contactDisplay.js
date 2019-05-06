@@ -1,5 +1,4 @@
 
-
 let domComponent = (contact)=> {
     let output = document.querySelector(".output")
     let block = `<h2>${contact.first_name} ${contact.last_name}</h2
