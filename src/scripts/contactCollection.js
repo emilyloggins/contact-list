@@ -1,13 +1,8 @@
 
 const contacts = {
     loadContacts: function () {
-        fetch("http://localhost:3000/contacts")
+        return fetch("http://localhost:3000/contacts")
         .then (result => result.json())
-        .then (parsedResult => {
-            parsedResult.forEach(contact => {
-            return contact
-            })
-        })
     },
     saveContact: function (contactToSave) {
         fetch("http://localhost:3000/contacts", {
