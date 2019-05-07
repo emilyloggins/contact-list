@@ -1,11 +1,10 @@
-
 const contacts = {
     loadContacts: function () {
-        return fetch("http://localhost:3000/contacts")
+        return fetch("http://localhost:8088/contacts")
         .then (result => result.json())
     },
     saveContact: function (contactToSave) {
-        fetch("http://localhost:3000/contacts", {
+        fetch("http://localhost:8088/contacts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -14,4 +13,5 @@ const contacts = {
         })
     }
 }
+
 export default contacts
